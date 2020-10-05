@@ -1,3 +1,27 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.principal
+{
+  width: 100%;
+  position: relative;
+  height: 650px;
+
+  background: #348F50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #56B4D3, rgba(52, 143, 79, 0.609)), url("/assets/welcome/principal3.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(86, 180, 211, 0.664), #348F50), url("/assets/welcome/principal3.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  //url("/assets/welcome/principal3.jpg")
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.wave
+{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
