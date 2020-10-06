@@ -2,11 +2,24 @@
 <%= form_for @user do |f| %>
 
 <div class="container">
+
+    <%- if @user.errors.any? %>
+        <div class="notification is-danger"> 
+            Lo sentimos, al parecer algo salió mal.
+        </div>
+    <% end %>
+
      <div class="field">
         <%= f.label :name, class: 'label' %>
         <div class="control">
             <%= f.text_field :name, placeholder: "Ej. Excel Dental", class: 'input' %>
         </div>
+
+        <%- if @user.errors[:name].any? %>
+            <div class="help is-danger"> 
+                <%= @user.errors[:name].first %>
+            </div>
+        <% end %>
     </div>
 
     <div class="field">
@@ -14,6 +27,12 @@
         <div class="control">
             <%= f.text_field :email, placeholder: "Ej. 8673065369@exceldental.com" , class: 'input'%>
         </div>
+
+        <%- if @user.errors[:email  ].any? %>
+            <div class="help is-danger"> 
+                <%= @user.errors[:email].first %>
+            </div>
+        <% end %>
     </div>
     
     <div class="field">
@@ -21,6 +40,12 @@
         <div class="control">
             <%= f.password_field :password, class: 'input' %>
         </div>
+
+        <%- if @user.errors[:password].any? %>
+            <div class="help is-danger"> 
+                <%= @user.errors[:password].first %>
+            </div>
+        <% end %>
     </div>
 
     <div class="field">
