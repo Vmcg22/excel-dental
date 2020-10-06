@@ -27,6 +27,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   #config.assets.compile = false
+  #Las 2 siguientes líneas permiten que cargue imágenes (ln. 31 y 32):
   config.assets.compile = true
   config.assets.digest = true 
 
