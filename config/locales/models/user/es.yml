@@ -7,7 +7,7 @@ es:
     attributes:
       user:
         name: 'Nombre'
-        mail: 'Correo Electrónico'
+        email: 'Correo Electrónico'
         password: 'Contraseña'
     errors:
       models:
