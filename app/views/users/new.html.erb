@@ -5,7 +5,7 @@
 
     <%- if @user.errors.any? %>
         <div class="notification is-danger"> 
-            Lo sentimos, al parecer algo salió mal.
+            <%= t 'user.errors' %>
         </div>
     <% end %>
 
@@ -48,12 +48,14 @@
         <% end %>
     </div>
 
+    <!--
     <div class="field">
         <%= f.label :password_confirmation, class: 'label' %>     
         <div class="control">
             <%= f.password_field :password_confirmation, class: 'input' %>         
         </div>
     </div>
+    -->
     
     <%= f.submit class: 'button is-primary'%>
 </div>

@@ -1,0 +1,22 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: 'Usuario'
+        other: 'Usuarios'
+    attributes:
+      user:
+        name: 'Nombre'
+        mail: 'Correo Electrónico'
+        password: 'Contraseña'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'No dejar el campo (Nombre) vacío.'
+            email:
+              blank: 'No dejar el campo (Correo Electrónico) vacío.'
+              taken: 'Este correo ya está disponible.'
+            password: 
+              blank: 'No dejar el campo (Contraseña) vacío.'
