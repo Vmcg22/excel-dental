@@ -3,6 +3,10 @@
 
 <div class="container">
 
+    <div class="notification is-primary"> 
+        <p class="title is-2"> Registro de Usuario </p>
+     </div>
+
     <%- if @user.errors.any? %>
         <div class="notification is-danger"> 
             <%= t 'user.errors' %>
@@ -22,10 +26,23 @@
         <% end %>
     </div>
 
+    <!-- **Alternativo**
+    <div class="field has-addons">
+        <div class="control">
+            <%= f.text_field :email, placeholder: "Ej. 8673065369" , class: 'input'%>    
+        </div>
+        <p class="control">
+            <a class="button is-static">
+                @exceldental.com
+            </a>
+        </p>
+    </div>
+    -->
     <div class="field">
         <%= f.label :email, class: 'label' %>
         <div class="control">
             <%= f.text_field :email, placeholder: "Ej. 8673065369@exceldental.com" , class: 'input'%>
+            
         </div>
 
         <%- if @user.errors[:email  ].any? %>
@@ -58,7 +75,5 @@
     -->
     
     <%= f.submit class: 'button is-primary'%>
-</div>
-   
 
 <% end %>
