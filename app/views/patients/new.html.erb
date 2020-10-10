@@ -27,18 +27,19 @@
         <%= form.label :fecha_nacimiento, class: 'label' %>
 
         <div class="control">
-            <%= date_field(:fecha_nacimiento, :born_on) %>
+            <%= date_field(:patient, :fecha_nacimiento) %>
+ 
         </div>
 
 
         <%= form.label :sexo, class: 'label' %>
 
         <div class="control">
-            <%= form.label :sexo, "Masculino", :value => "Masculino" %>
-            <%= form.radio_button :sexo, true%>
-            <br>
-            <%= form.label :sexo, "Femenino", :value => "Femenino" %>
-            <%= form.radio_button :sexo, false, :checked => true %>
+            <%= form.label :sexo, "Masculino" %>
+            <%= form.radio_button :sexo, 'Masculino' %> 
+
+            <%= form.label :sexo, "Femenino" %>
+            <%= form.radio_button :sexo, 'Femenino',:checked => true  %> 
         </div>
 
 
