@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'patients/index'
   get 'patients/show'
+  get 'patients/new'
   #get 'users/new', to: 'users#new'
   #get 'users/create'
   

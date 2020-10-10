@@ -1,0 +1,2 @@
+<%= link_to('Regístrate', signup_path, class: 'button is-primary') %>
+          <%= link_to('Iniciar sesión', login_path, class: 'button is-light')  %>
