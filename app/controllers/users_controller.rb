@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       #return redirect_to new_users_path
-      return redirect_to url_for(:controller => :patients, :action => :index)
+      return redirect_to url_for(:controller => :patients, :action => :new)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores

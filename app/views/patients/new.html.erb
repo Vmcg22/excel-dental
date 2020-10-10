@@ -1,5 +1,9 @@
 <%= form_for @patient do |form| %>
     <div class="container">
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Datos Personales </p>
+        </div>
         
         <%= form.label :nombres, class: 'label' %>
 
@@ -80,7 +84,8 @@
         </div>
         <br>
         <%= form.submit class: 'button is-primary'%>
-
+        <br> <br>
+        
     </div>
 
     
