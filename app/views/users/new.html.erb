@@ -7,7 +7,7 @@
         <p class="title is-2"> Registro de Usuario </p>
      </div>
 
-    <!--FormBuilder para div con error-->
+    <!--FormBuilder para "div" con error-->
     <%= f.form_error %>
 
      <div class="field">
@@ -16,6 +16,7 @@
             <%= f.text_field :name, placeholder: "Ej. Excel Dental", class: 'input' %>
         </div>
 
+        <!--FormBuilder para "p" con error-->
         <%= f.field_error(:name)%>
     </div>
 

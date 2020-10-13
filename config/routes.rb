@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   root 'welcome#index'
-  get 'welcome/index'
+
 
   #get 'patients/index'
   #get 'patients/show'
