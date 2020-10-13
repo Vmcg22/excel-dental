@@ -3,5 +3,7 @@ es:
     submit:
       user:
         create: "Guardar %{model}"
-  user:
-    errors: 'Lo sentimos, al parecer algo salió mal.'
+  users:
+    new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
