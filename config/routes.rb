@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  #Ruta, to => controlador con acción a responder esa "url"
+  get 'signup', to: 'users#new' #Registro de usuario.
+  get 'login', to: 'sessions#new' #Solicita fórmulario de auth.
+  post 'login', to: 'sessions#create' #Evaluación de credenciales
+  get 'logout', to: 'sessions#destroy' #Cerrar sesión.
 
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
   root 'welcome#index'
 
 
