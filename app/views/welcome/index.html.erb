@@ -5,7 +5,6 @@
   
   <a class="" href="">
       <!-- <img src="<=% asset_path '../welcome/Imagenes/logo.jpg' %>" width="112" height="28">-->
-
       <%= image_tag '/assets/welcome/logo.jpg', size: 120 %>
     </a>
 
@@ -37,16 +36,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-        <!--
-          
-        -->
-          <a class="button is-primary">
-            <strong>Regístrate</strong>
-          </a>
-          <a class="button is-light">
-            Iniciar sesión
-          </a>
-        
+          <%= link_to('Regístrate', signup_path, class: 'button is-primary') %>
+          <%= link_to('Iniciar Sesión', login_path, class: 'button is-link is-light') %>
         </div>
       </div>
     </div>

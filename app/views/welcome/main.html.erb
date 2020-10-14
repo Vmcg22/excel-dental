@@ -1,5 +1,10 @@
-    <% flash.each do |key,value|%>
-      <div class="notification <%= flash_class(key) %>">
-        <%= value %> 
-      </div>
-    <% end %>
+  <% flash.each do |key,value|%>
+    <div class="notification <%= flash_class(key) %>">
+      <%= value %> 
+    </div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <h1 class="tittle"> Bienvenido, <%= current_user.name %> </h1>
+    <%= link_to('Salir', logout_path, class: 'button is-primary') %>
+  <% end %>
