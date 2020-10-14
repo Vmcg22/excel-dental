@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy' #Cerrar sesión.
 
   root 'welcome#index'
+  get 'welcome/main'
 
 
   #get 'patients/index'
