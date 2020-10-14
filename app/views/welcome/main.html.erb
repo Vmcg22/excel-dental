@@ -4,7 +4,4 @@
     </div>
   <% end %>
 
-  <% if user_signed_in? %>
-    <h1 class="tittle"> Bienvenido, <%= current_user.name %> </h1>
-    <%= link_to('Salir', logout_path, class: 'button is-primary') %>
-  <% end %>
+<%= render "navegation/navigation" %>
