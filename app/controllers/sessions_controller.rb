@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to welcome_main_path, notice: 'Sesión Iniciada'
+      #redirect_to welcome_main_path, notice: 'Sesión Iniciada'
+      redirect_to welcome_main_path
     else
       flash.now[:alert] = 'El Correo o Contraseña es Incorrecto'
       render :new
