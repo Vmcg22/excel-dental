@@ -7,7 +7,7 @@ es:
     attributes:
       user:
         name: 'Nombre'
-        email: 'Correo Electrónico'
+        email: 'Número de Teléfono'
         password: 'Contraseña'
     errors:
       models:
@@ -16,7 +16,7 @@ es:
             name:
               blank: 'No dejar el campo (Nombre) vacío.'
             email:
-              blank: 'No dejar el campo (Correo Electrónico) vacío.'
+              blank: 'No dejar el campo (Número de Teléfono) vacío.'
               taken: 'Este correo ya está disponible.'
             password: 
               blank: 'No dejar el campo (Contraseña) vacío.'
