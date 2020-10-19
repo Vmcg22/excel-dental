@@ -1,0 +1,38 @@
+es:
+  activerecord:
+    models:
+      patient:
+        one: 'Paciente'
+        other: 'Pacientes'
+    attributes:
+      patient:
+        nombres: 'Nombres'
+        apellidos: 'Apellidos'
+        edad: 'Edad'
+        fecha_nacimiento: 'Fecha de Nacimiento'
+        sexo: 'Sexo'
+        colonia: 'Colonia'
+        direccion: 'Dirección'
+        telefono: 'Teléfono'
+        celular: 'Celular'
+    errors:
+      models:
+        patient:
+          attributes:
+            nombres:
+              blank: 'No dejar el campo (Nombres) vacío.'
+            apellidos:
+              blank: 'No dejar el campo (Apellidos) vacío.'
+            edad:
+              blank: 'No dejar el campo (Edad) vacío.'
+            fecha_nacimiento:
+              blank: 'Necesita especificar una (Fecha de Nacimiento) valida.'
+            colonia:
+              blank: 'No dejar el campo (Colonia) vacío.'
+            direccion:
+              blank: 'No dejar el campo (Dirección) vacío.'
+            celular:
+              blank: 'No dejar el campo (Celular) vacío.'
+            celular:
+              blank: 'No dejar el campo (Celular) vacío.'
+            

@@ -1,0 +1,9 @@
+es:
+  helpers:
+    submit:
+      patient:
+        create: "Guardar %{model}"
+  patients:
+    new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
