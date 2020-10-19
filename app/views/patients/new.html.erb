@@ -4,12 +4,27 @@
         <div class="notification is-primary"> 
             <p class="title is-2"> Datos Personales </p>
         </div>
-        
-        <%= form.label :nombres, class: 'label' %>
 
-        <div class="control">
-            <%= form.text_field :nombres, placeholder: "Ej. Carlos Geovani", class: 'input' %>
+        <%- if @patient.errors.any? %>
+            <div class="notification is-danger">
+                Lo sentimos, al parecer algo salió mal.
+            </div>
+        <%end%>
+
+        <div class="field">
+            <%= form.label :nombres, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :nombres, placeholder: "Ej. Carlos Geovani", class: 'input' %>
+            </div>
+
+            <%- if @patient.errors[:nombres].any? %>
+                <div class="help is-danger">
+                    <%= @patient.errors[:nombres].first%>
+                </div>
+            <%end%>
         </div>
+        
 
         <%= form.label :apellidos, class: 'label' %>
 
