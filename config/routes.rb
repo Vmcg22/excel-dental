@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'diseases/index'
+  get 'diseases/new'
   #Ruta, to => controlador con acción a responder esa "url"
   get 'signup', to: 'users#new' #Registro de usuario.
   get 'login', to: 'sessions#new' #Solicita fórmulario de auth.
