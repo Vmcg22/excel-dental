@@ -1,18 +1,18 @@
 <div class="container">
     <div class="notification is-primary"> 
-        <p class="title is-2"> Enfermedades </p>
+        <p class="title is-2"> Enfermedades (Opcional)</p>
     </div>
 
     
 
     <div class="field">
-        <label class="label">
-            <input type="checkbox" name="chec" id="chec" onchange="comprobar();">
-                ¿Usted padece de alguna Enfermedad?
+        <label class="label is-medium">
+            ¿Usted padece de alguna Enfermedad?
+            <input type="checkbox" name="checEnfermedad" id="checEnfermedad" onchange="comprobar();">
         </label>
 
         <div class="control">
-            <input class="input is-primary" type="text" placeholder="Ej. Presión Alta, Presión Baja, Diabetes" name="text" id="boton" readonly>
+            <input class="input is-primary" type="text" value="Ninguna" name="text" id="boton" readonly>
         </div>
     </div>
 
@@ -23,7 +23,7 @@
             <button class="button is-primary">Guardar Enfermedades</button>
         </div>
     </div>
- 
+        
 
 </div>
 
@@ -31,11 +31,19 @@
 <script>
     function comprobar()
     {   
-        if (document.getElementById("chec").checked)
-        document.getElementById('boton').readOnly = false;
+        if (document.getElementById("checEnfermedad").checked)
+        {
+            document.getElementById('boton').value = "";
+            document.getElementById('boton').readOnly = false;
+            document.getElementById('boton').placeholder = "Ej. Presión Alta, Presión Baja, Diabetes";
+        }
             
         else
-        document.getElementById('boton').readOnly = true;
+        {
+            document.getElementById('boton').readOnly = true;
+            document.getElementById('boton').value = "Ninguna";
+        }
+        
             
     }
 </script>
