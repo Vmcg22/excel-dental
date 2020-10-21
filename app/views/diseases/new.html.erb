@@ -1,3 +1,41 @@
-<h1>Diseases#new</h1>
-<p>Find me in app/views/diseases/new.html.erb</p>
-<%= javascript_pack_tag 'diseases' %>
+<div class="container">
+    <div class="notification is-primary"> 
+        <p class="title is-2"> Enfermedades </p>
+    </div>
+
+    
+
+    <div class="field">
+        <label class="label">
+            <input type="checkbox" name="chec" id="chec" onchange="comprobar();">
+                ¿Usted padece de alguna Enfermedad?
+        </label>
+
+        <div class="control">
+            <input class="input is-primary" type="text" placeholder="Ej. Presión Alta, Presión Baja, Diabetes" name="text" id="boton" readonly>
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary">Guardar Enfermedades</button>
+        </div>
+    </div>
+ 
+
+</div>
+
+
+<script>
+    function comprobar()
+    {   
+        if (document.getElementById("chec").checked)
+        document.getElementById('boton').readOnly = false;
+            
+        else
+        document.getElementById('boton').readOnly = true;
+            
+    }
+</script>
