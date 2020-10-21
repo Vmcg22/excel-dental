@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'diseases/index'
-  get 'diseases/new'
   #Ruta, to => controlador con acción a responder esa "url"
   get 'signup', to: 'users#new' #Registro de usuario.
   get 'login', to: 'sessions#new' #Solicita fórmulario de auth.
@@ -25,6 +23,7 @@ Rails.application.routes.draw do
 
   resource :users, only: [:new, :create]
   resource :patients
+  resource :diseases
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

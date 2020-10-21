@@ -1,47 +1,46 @@
-<div class="container">
-    <div class="notification is-primary"> 
-        <p class="title is-2"> Enfermedades (Opcional)</p>
-    </div>
+<%= form_for @disease do |form| %>
+    <div class="container">
 
-    
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Enfermedades (Opcional)</p>
+        </div>
 
-    <div class="field">
-        <label class="label is-medium">
-            ¿Usted padece de alguna Enfermedad?
-            <input class="check" type="checkbox" name="checEnfermedad" id="checEnfermedad" onchange="comprobar();">
-        </label>
+        <div class="field">
+            <label class="label is-medium">
+                ¿Usted padece de alguna Enfermedad?
+                <input class="check" type="checkbox" name="checEnfermedad" id="checEnfermedad" onchange="comprobar();">
+            </label>
 
-        <div class="control">
-            <input class="input is-primary" type="text" value="Ninguna" name="text" id="boton" readonly>
+            <div class="control">
+                <%= form.text_field :respuesta, value: "Ninguna", readonly: true , class: 'input is-primary' %>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="field is-grouped">
+            <div class="control">
+                <%= form.submit class: 'button is-primary'%>
+            </div>
         </div>
     </div>
-
-    <br>
-    
-    <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-primary">Guardar Enfermedades</button>
-        </div>
-    </div>
-</div>
-
+<% end %>
 
 <script>
     function comprobar()
     {   
         if (document.getElementById("checEnfermedad").checked)
         {
-            document.getElementById('boton').value = "";
-            document.getElementById('boton').readOnly = false;
-            document.getElementById('boton').placeholder = "Ej. Presión Alta, Presión Baja, Diabetes";
-        }
-            
+            document.getElementById('disease_respuesta').value = "";
+            document.getElementById('disease_respuesta').readOnly = false;
+            document.getElementById('disease_respuesta').placeholder = "Ej. Presión Alta, Presión Baja, Diabetes";
+        }            
         else
         {
-            document.getElementById('boton').readOnly = true;
-            document.getElementById('boton').value = "Ninguna";
+            document.getElementById('disease_respuesta').readOnly = true;
+            document.getElementById('disease_respuesta').value = "Ninguna";
         }
-        
-            
     }
 </script>
+
+
