@@ -14,7 +14,7 @@ class PatientsController < ApplicationController
 
     if @patient.save
       #return redirect_to new_users_path
-      return redirect_to url_for(:controller => :patients, :action => :new)
+      return redirect_to url_for(:controller => :diseases, :action => :new)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores
