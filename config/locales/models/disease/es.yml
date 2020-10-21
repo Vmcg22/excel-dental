@@ -1,0 +1,18 @@
+es:
+  activerecord:
+    models:
+      disease:
+        one: 'Enfermedad'
+        other: 'Enfermedades'
+    attributes:
+      disease:
+        respuesta: 'Respuesta'
+    errors:
+      models:
+        disease:
+          attributes:
+            respuesta:
+              blank: 'No dejar el campo de (Enfermedades) vacío.'
+
+
+            

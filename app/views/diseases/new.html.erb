@@ -1,10 +1,18 @@
-<%= form_for @disease do |form| %>
+<%= form_for @disease, builder: BulmaFormBuilder do |form| %>
     <div class="container">
 
         <div class="notification is-primary"> 
             <p class="title is-2"> Enfermedades (Opcional)</p>
         </div>
 
+        <!--FormBuilder para "div" con error-->
+        <%= form.form_error %>
+
+        <p class="is-large">
+            En esta vista usted ingresará las enfermedades que tenga de ser así. Si usted tiene alguna enfermedad, seleccione la casilla y escribala. Si no solo presione el botón "Guardar Enfermedad". 
+        </p>
+        <br> <br>
+        
         <div class="field">
             <label class="label is-medium">
                 ¿Usted padece de alguna Enfermedad?
@@ -14,6 +22,9 @@
             <div class="control">
                 <%= form.text_field :respuesta, value: "Ninguna", readonly: true , class: 'input is-primary' %>
             </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:respuesta)%>
         </div>
 
         <br>
