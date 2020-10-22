@@ -10,19 +10,15 @@ Rails.application.routes.draw do
   get 'welcome/main'
 
 
-  #get 'patients/index'
-  #get 'patients/show'
-  #get 'patients/new'
-  
-  #get 'users/new', to: 'users#new'
-  #get 'users/create'
-  
-  
-  
-  #resource :patients, only: [:index, :show]
+
+ 
+
 
   resource :users, only: [:new, :create]
+
   resource :patients
+  get 'patients/:id' => 'patients#show'
+  
   resource :diseases
 
 
