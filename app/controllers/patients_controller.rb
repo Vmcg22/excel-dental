@@ -10,7 +10,7 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.new(patient_params)
+    @patient = current_user.patients.new(patient_params)
 
     if @patient.save
       #return redirect_to new_users_path

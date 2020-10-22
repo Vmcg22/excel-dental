@@ -9,5 +9,6 @@ class User < ApplicationRecord
     validates :name, :password, presence: true
 
     #Relaciones:
-    has_one :patient
+    has_many :patients
+
 end

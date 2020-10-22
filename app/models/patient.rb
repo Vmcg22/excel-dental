@@ -3,5 +3,5 @@ class Patient < ApplicationRecord
     validates :nombres, :apellidos, :edad, :fecha_nacimiento, :colonia, :direccion, :celular, presence: true
 
     #Relaciones:
-    
+    belongs_to :user
 end
