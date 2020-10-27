@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      #return redirect_to new_users_path
+      session[:user_id] = @user.id
       return redirect_to url_for(:controller => :patients, :action => :new)
     end
 
