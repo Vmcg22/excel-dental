@@ -8,12 +8,10 @@ class PatientsController < ApplicationController
 
   def new
     @patient = Patient.new
-    @patient.disease_id = 0
   end
 
   def create
     @patient = current_user.patients.new(patient_params)
-
 
     if @patient.save
       #return redirect_to new_users_path

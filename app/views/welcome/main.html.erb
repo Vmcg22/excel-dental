@@ -17,6 +17,10 @@
     <h3 class="title is-3"> Dirección: <%= @patient.colonia %>, <%= @patient.direccion %>.</h3>
 
     <%= link_to "Ver Información General (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+
+    <br>
+
+    <h3 class="title is-3"> Enfermedades: <%= @disease.respuesta %>. </h3>
 </div>
 
 

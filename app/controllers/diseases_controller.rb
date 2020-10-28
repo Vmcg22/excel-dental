@@ -7,12 +7,16 @@ class DiseasesController < ApplicationController
     @disease = Disease.new
   end
 
+  
+
   def create
     @disease = Disease.new(disease_params)
 
     if @disease.save
-      #return redirect_to new_users_path
-      return redirect_to url_for(:controller => :diseases, :action => :new)
+      @patient = Patient.find_by_user_id(current_user.id)
+      @patient.update(disease_id: @disease.id)
+      
+      return redirect_to url_for(:controller => :welcome, :action => :main)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores

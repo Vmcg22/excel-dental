@@ -4,6 +4,6 @@ class Patient < ApplicationRecord
 
     #Relaciones:
     belongs_to :user
-    belongs_to :disease
+    belongs_to :disease, required: false
 
 end
