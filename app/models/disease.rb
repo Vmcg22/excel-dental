@@ -3,5 +3,5 @@ class Disease < ApplicationRecord
     validates :respuesta, presence: true
 
     #Relaciones:
-    has_one :patient
+    has_many :patients
 end
