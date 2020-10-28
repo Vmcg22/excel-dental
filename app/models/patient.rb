@@ -4,4 +4,5 @@ class Patient < ApplicationRecord
 
     #Relaciones:
     belongs_to :user
+
 end
