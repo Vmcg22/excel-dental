@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to welcome_main_path, notice: 'Sesión Cerrada'
+    #redirect_to root_path, notice: 'Sesión Cerrada'
+    redirect_to root_path
   end
 end
