@@ -3,42 +3,44 @@
         <p class="title is-2"> Datos Personales de <%= @patient.nombres %></p>
     </div>
 
-    <table class="table is-bordered">
-  <thead>
-    <tr>
-      <th><abbr>Nombres</abbr></th>
-      <th>Apellidos</th>
-      <th><abbr>Edad</abbr></th>
-      <th><abbr> Fecha Nacimiento </abbr></th>
-      <th><abbr> Sexo </abbr></th>
-      <th><abbr> Colonia </abbr></th>
-      <th><abbr> Dirección </abbr></th>
-      <th><abbr> Teléfono </abbr></th>
-      <th><abbr> Celular </abbr></th>
-      <th><abbr> Apodo </abbr></th>
-      <th>Facebook</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th> <%= @patient.nombres%> </th>
-      <th> <%= @patient.apellidos%> </th> 
-      <th> <%= @patient.edad %> </th>
-      <th> <%= @patient.fecha_nacimiento%> </th>
-      <th> <%= @patient.sexo%> </th> 
-      <th> <%= @patient.colonia %> </th>
-       <th> <%= @patient.direccion%> </th> 
-      <th> <%= @patient.telefono %> </th>
-      <th> <%= @patient.celular%> </th>
-      <th> <%= @patient.apodo%> </th> 
-      <th> <%= @patient.facebook %> </th>
-      <th> <button class="button is-black">Editar</button> </th>
-
-    </tr>
-    
-  </tbody>
-</table>
+  <!-- Permite hacer que tenga un scroll la tabla
+  <div class="table-container">
+  </div>
+  -->
+  <table class="table is-bordered">
+    <thead>
+      <tr>
+        <th><abbr>Nombres</abbr></th>
+        <th>Apellidos</th>
+        <th><abbr>Edad</abbr></th>
+        <th><abbr> Fecha Nacimiento </abbr></th>
+        <th><abbr> Sexo </abbr></th>
+        <th><abbr> Colonia </abbr></th>
+        <th><abbr> Dirección </abbr></th>
+        <th><abbr> Teléfono </abbr></th>
+        <th><abbr> Celular </abbr></th>
+        <th><abbr> Apodo </abbr></th>
+        <th>Facebook</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th> <%= @patient.nombres%> </th>
+        <th> <%= @patient.apellidos%> </th> 
+        <th> <%= @patient.edad %> </th>
+        <th> <%= @patient.fecha_nacimiento%> </th>
+        <th> <%= @patient.sexo%> </th> 
+        <th> <%= @patient.colonia %> </th>
+        <th> <%= @patient.direccion%> </th> 
+        <th> <%= @patient.telefono %> </th>
+        <th> <%= @patient.celular%> </th>
+        <th> <%= @patient.apodo%> </th> 
+        <th> <%= @patient.facebook %> </th>
+        <th> <button class="button is-black">Editar</button> </th>
+      </tr>
+    </tbody>
+  </table>
 
 
 </div>
