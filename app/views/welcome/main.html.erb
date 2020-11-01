@@ -18,9 +18,11 @@
 
     <%= link_to "Ver Información General (Completa)...", controller: "patients", action: "show", id: @patient.id%>
 
-    <br>
+    <br> <hr>
 
     <h3 class="title is-3"> Enfermedades: <%= @disease.respuesta %>. </h3>
+
+     <%= link_to "Ver Información Enfermedades (Completa)...", controller: "patients", action: "show", id: @patient.id%>
 </div>
 
 
