@@ -1,2 +1,55 @@
-<h1>Medicines#new</h1>
-<p>Find me in app/views/medicines/new.html.erb</p>
+<%= form_for @medicine do |form| %>
+
+    <div class="container">
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Medicamentos (Opcional)</p>
+        </div>
+
+
+        <p class="is-large">
+            En esta vista usted ingresará los medicamentos que consuma. Si usted toma algún medicamento, seleccione la casilla y escribalo(s). Si no, solo presione el botón "Guardar Medicamento". 
+        </p>
+        <br> <br>
+        
+        <div class="field">
+            <label class="label is-medium">
+                ¿Usted padece de alguna Enfermedad?
+                <input class="check" type="checkbox" name="checMedicamento" id="checMedicamento" onchange="comprobar();">
+            </label>
+
+            <div class="control">
+                <%= form.text_field :respuesta, value: "Ninguno", readonly: true , class: 'input is-primary' %>
+            </div>
+
+        </div>
+
+        <br>
+        
+        <div class="field is-grouped">
+            <div class="control">
+                <%= form.submit class: 'button is-primary'%>
+            </div>
+        </div>
+
+        
+    </div>
+
+<% end %>
+
+<script>
+    function comprobar()
+    {   
+        if (document.getElementById("checMedicamento").checked)
+        {
+            document.getElementById('medicine_respuesta').value = "";
+            document.getElementById('medicine_respuesta').readOnly = false;
+            document.getElementById('medicine_respuesta').placeholder = "Ej. Presión Alta, Presión Baja, Diabetes";
+        }            
+        else
+        {
+            document.getElementById('medicine_respuesta').readOnly = true;
+            document.getElementById('medicine_respuesta').value = "Ninguno";
+        }
+    }
+</script>
