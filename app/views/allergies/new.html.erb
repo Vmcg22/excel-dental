@@ -1,9 +1,12 @@
-<%= form_for @allergy do |form| %>
+<%= form_for @allergy, builder: BulmaFormBuilder do |form| %>
     <div class="container">
 
         <div class="notification is-primary"> 
             <p class="title is-2"> Alergias (Opcional)</p>
         </div>
+        
+        <!--FormBuilder para "div" con error-->
+        <%= form.form_error %>
 
         <p class="is-large">
             En esta vista usted ingresará los medicamentos a los que es alérgico de ser así. Si usted tiene alguna alergia, seleccione la casilla y escribala(s). Si no solo presione el botón "Guardar Alergia". 
@@ -19,13 +22,17 @@
             <div class="control">
                 <%= form.text_field :respuesta, value: "Ninguna", readonly: true , class: 'input is-primary' %>
             </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:respuesta)%>
+
         </div>
 
         <br>
         
         <div class="field is-grouped">
             <div class="control">
-                <%= form.submit class: 'button is-primary'%>
+                <%= form.submit "Guardar Alergia", class: 'button is-primary'%>
             </div>
         </div>
         

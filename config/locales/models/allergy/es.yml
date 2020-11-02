@@ -1,0 +1,18 @@
+es:
+  activerecord:
+    models:
+      allergy:
+        one: 'Alergia'
+        other: 'Alergias'
+    attributes:
+      allergy:
+        respuesta: 'Respuesta'
+    errors:
+      models:
+        allergy:
+          attributes:
+            respuesta:
+              blank: 'No dejar el campo de (Alergias) vacío.'
+
+
+            

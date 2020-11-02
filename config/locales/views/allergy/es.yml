@@ -1,0 +1,9 @@
+es:
+  helpers:
+    submit:
+      allery:
+        create: "Guardar %{model}"
+  allergies:
+    new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
