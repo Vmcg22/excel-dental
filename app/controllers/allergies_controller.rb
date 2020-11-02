@@ -10,6 +10,8 @@ class AllergiesController < ApplicationController
     @allergy = Allergy.new(allergy_params)
 
     if @allergy.save
+      @patient = Patient.find_by_user_id(current_user.id)
+      @patient.update(allergy_id: @allergy.id)
       return redirect_to url_for(:controller => :welcome, :action => :main)
     end
 

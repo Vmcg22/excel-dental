@@ -5,5 +5,6 @@ class Patient < ApplicationRecord
     #Relaciones:
     belongs_to :user
     belongs_to :disease, required: false
+    belongs_to :allergy, required: false
 
 end
