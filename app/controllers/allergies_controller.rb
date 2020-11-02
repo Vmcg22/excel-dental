@@ -3,5 +3,6 @@ class AllergiesController < ApplicationController
   end
 
   def new
+    @allergies = Allergy.new
   end
 end
