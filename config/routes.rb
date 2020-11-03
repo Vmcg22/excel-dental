@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'allergies/index'
   resources :allergies
   resources :medicines
+  resources :substances
   
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

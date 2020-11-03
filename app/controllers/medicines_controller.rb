@@ -9,7 +9,7 @@ class MedicinesController < ApplicationController
     if @medicine.save
       @patient = Patient.find_by_user_id(current_user.id)
       @patient.update(medicine_id: @medicine.id)
-      return redirect_to url_for(:controller => :welcome, :action => :main)
+      return redirect_to url_for(:controller => :substances, :action => :new)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores
