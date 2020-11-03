@@ -5,9 +5,10 @@ class SubstancesController < ApplicationController
 
   def create
     @substance = Substance.new(substance_params)
-
+    
     if @substance.save
-      
+      @patient = Patient.find_by_user_id(current_user.id)
+      @patient.update(substance_id: @substance.id)
       return redirect_to url_for(:controller => :welcome, :action => :main)
     end
 

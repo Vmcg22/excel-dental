@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_03_023145) do
+ActiveRecord::Schema.define(version: 2020_11_03_041213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_023145) do
     t.integer "disease_id"
     t.integer "allergy_id"
     t.integer "medicine_id"
+    t.integer "substance_id"
   end
 
   create_table "substances", force: :cascade do |t|
@@ -71,5 +72,6 @@ ActiveRecord::Schema.define(version: 2020_11_03_023145) do
   add_foreign_key "patients", "allergies"
   add_foreign_key "patients", "diseases"
   add_foreign_key "patients", "medicines"
+  add_foreign_key "patients", "substances"
   add_foreign_key "patients", "users"
 end

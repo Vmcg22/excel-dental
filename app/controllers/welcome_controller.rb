@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
     @disease = Disease.find(@patient.disease_id)
     @allergy = Allergy.find(@patient.allergy_id)
     @medicine = Medicine.find(@patient.medicine_id)
+    @substance = Substance.find(@patient.substance_id)
   end
   
 end
