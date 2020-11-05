@@ -1,2 +1,32 @@
-<h1>MedicalFiles#new</h1>
-<p>Find me in app/views/medical_files/new.html.erb</p>
+<%= form_for @medical_file, html: { multipart: true } do |f|  %>
+    
+    <div class="container">
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Enfermedades (Opcional)</p>
+        </div>
+
+    <div class="">
+        <div class="">
+          
+          <%= f.file_field :foto_expediente %>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+    </div>
+ 
+
+    <br> <br>
+
+    <div class="field is-grouped">
+            <div class="control">
+                <%= f.submit class: 'button is-primary'%>
+            </div>
+        </div>   
+<% end %>
+
+
+
+
+
