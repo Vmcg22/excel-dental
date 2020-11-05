@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2020-11-04 19:26:25
+  foto_expediente: MyString
+  foto_contrato: MyString
+
+two:
+  fecha: 2020-11-04 19:26:25
+  foto_expediente: MyString
+  foto_contrato: MyString
