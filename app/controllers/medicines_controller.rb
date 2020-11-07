@@ -3,6 +3,10 @@ class MedicinesController < ApplicationController
     @medicine = Medicine.new
   end
 
+  def show
+    @medicine = Medicine.find(params[:id])
+  end
+
   def create
     @medicine = Medicine.new(medicine_params)
 

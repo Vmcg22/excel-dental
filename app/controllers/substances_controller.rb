@@ -3,6 +3,10 @@ class SubstancesController < ApplicationController
     @substance = Substance.new
   end
 
+  def show
+    @substance = Substance.find(params[:id])
+  end
+
   def create
     @substance = Substance.new(substance_params)
     

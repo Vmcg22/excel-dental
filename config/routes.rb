@@ -23,9 +23,13 @@ Rails.application.routes.draw do
   get 'allergies/index'
   get 'allergies/:id' => 'allergies#show'
   resources :allergies
-  
+
   resources :medicines
+  get 'medicines/:id' => 'medicines#show'
+
   resources :substances
+  get 'substances/:id' => 'substances#show'
+
   resources :medical_files
   
 
