@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     def user_signed_in?
         !current_user.nil?
     end
+
+    def authenticate_user!
+        redirect_to root_path, alert: 'Debes Iniciar Sesión Primero' unless user_signed_in?
+    end
 end
