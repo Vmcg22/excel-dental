@@ -28,7 +28,7 @@
 
     <h3 class="title is-3"> Alergias: <%= @allergy.respuesta %>. </h3>
 
-    <%= link_to "Ver Información Alergias (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+    <%= link_to "Ver Información Alergias (Completa)...", controller: "allergies", action: "show", id: @patient.allergy_id%>
 
         <br> <hr>
 

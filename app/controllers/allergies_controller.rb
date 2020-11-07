@@ -6,6 +6,10 @@ class AllergiesController < ApplicationController
     @allergy = Allergy.new
   end
 
+  def show
+    @allergy = Allergy.find(params[:id])
+  end
+
   def create
     @allergy = Allergy.new(allergy_params)
 
