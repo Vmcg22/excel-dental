@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'patients/:id' => 'patients#show'
   
   resource :diseases
+  get 'diseases/:id' => 'diseases#show'
   
   get 'allergies/index'
   resources :allergies

@@ -7,7 +7,9 @@ class DiseasesController < ApplicationController
     @disease = Disease.new
   end
 
-  
+  def show
+    @disease = Disease.find(params[:id])
+  end
 
   def create
     @disease = Disease.new(disease_params)
