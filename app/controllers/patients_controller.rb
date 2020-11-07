@@ -26,9 +26,15 @@ class PatientsController < ApplicationController
   end
 
   def edit
+    @patient = Patient.find(params[:id])
   end
 
   def update
+    @patient = Patient.find(params[:id])
+
+    if @patient.update patient_params
+      return redirect_to url_for(:controller => :patients, :action => :show)
+    end
   end
 
   def delete

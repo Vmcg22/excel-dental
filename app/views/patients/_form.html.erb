@@ -1,0 +1,136 @@
+<%= form_for @patient, builder: BulmaFormBuilder do |form| %>
+    <div class="container">
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Datos Personales </p>
+        </div>
+
+        <!--FormBuilder para "div" con error-->
+        <%= form.form_error %>
+
+        <div class="field">
+            <%= form.label :nombres, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :nombres, placeholder: "Ej. Carlos Geovani", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:nombres)%>
+        </div>
+
+
+        <div class="field">
+            <%= form.label :apellidos, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :apellidos, placeholder: "Ej. Castillo González", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:apellidos)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :edad, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :edad, placeholder: "Ej. 39", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:edad)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :fecha_nacimiento, class: 'label' %>
+
+            <div class="control">
+                <%= date_field(:patient, :fecha_nacimiento) %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:fecha_nacimiento)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :sexo, class: 'label' %>
+
+            <div class="control">
+                <%= form.label :sexo, "Masculino" %>
+                <%= form.radio_button :sexo, 'Masculino' %> 
+
+                <br>
+
+                <%= form.label :sexo, "Femenino" %>
+                <%= form.radio_button :sexo, 'Femenino',:checked => true  %> 
+            </div>
+        </div>
+
+        <div class="field">
+            <%= form.label :colonia, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :colonia, placeholder: "Ej. Buena Vista", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:colonia)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :direccion, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :direccion, placeholder: "Ej. Revolución #7533", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:direccion)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :celular, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :celular, placeholder: "Ej. 867 126 4856", class: 'input' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:celular)%>
+        </div>
+
+        <div class="field">
+            <%= form.label :telefono, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :telefono, placeholder: "Ej. 867 196 0471", class: 'input' %>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">¿Cómo le gusta que lo llamen?</label>
+
+            <div class="control">
+                <%= form.text_field :apodo, placeholder: "Ej. Carlos", class: 'input' %>
+            </div>
+        </div>
+
+        <div class="field">
+            <%= form.label :facebook, class: 'label' %>
+
+            <div class="control">
+                <%= form.text_field :facebook, placeholder: "Ej. Excel Dental", class: 'input' %>
+            </div>
+        </div>
+
+        <br>
+
+        <%= form.submit class: 'button is-primary'%>
+        <br> <br>
+        
+    </div>
+
+    
+    
+<% end %>

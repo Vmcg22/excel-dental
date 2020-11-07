@@ -1,7 +1,15 @@
 <div class="container">
-    <div class="notification is-primary"> 
-        <p class="title is-2"> Datos Personales de <%= @patient.nombres %></p>
-    </div>
+  <div class="notification is-primary"> 
+    <p class="title is-2"> Datos Personales de <%= @patient.nombres %></p>
+  </div>
+
+  <th>  
+    <button class="button is-outlined">
+      <%= link_to "Volver Expediente Médico", controller: "welcome", action: "main"%>
+    </button>
+  </th>
+
+  <br> <br>
 
   <!-- Permite hacer que tenga un scroll la tabla
   <div class="table-container">
@@ -37,7 +45,10 @@
         <th> <%= @patient.celular%> </th>
         <th> <%= @patient.apodo%> </th> 
         <th> <%= @patient.facebook %> </th>
-        <th> <button class="button is-black">Editar</button> </th>
+        <th> <button class="button is-outlined">
+            <%= link_to "Editar", controller: "patients", action: "edit", id: @patient.id%>
+        </button>
+        </th>
       </tr>
     </tbody>
   </table>
