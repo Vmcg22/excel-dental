@@ -8,11 +8,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/main'
+  get 'welcome/:id' => 'welcome#show'
+
 
 
   resource :users, only: [:new, :create]
 
-  resource :patients
+  resources :patients
   get 'patients/:id' => 'patients#show'
   
   resource :diseases

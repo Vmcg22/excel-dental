@@ -1,0 +1,60 @@
+<%= render "navigation/navbar" %>
+<br>
+
+<div class="container">
+    <div class="notification is-primary"> 
+        <p class="title is-2"> Expediente Médico de <%= @patient.nombres %></p>
+    </div>
+
+    <h1 class="title is-1"> <%= @patient.nombres + " " + @patient.apellidos %> </h1>
+
+    <h3 class="title is-3"> Cel. <%= @patient.celular %>. </h3>
+
+    <h3 class="title is-3"> Edad: <%= @patient.edad %>.</h3>
+
+    <h3 class="title is-3">Sexo: <%= @patient.sexo %>.</h3>
+
+    <h3 class="title is-3"> Dirección: <%= @patient.colonia %>, <%= @patient.direccion %>.</h3>
+
+    <%= link_to "Ver Información General (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+
+        <br> <hr>
+
+    <h3 class="title is-3"> Enfermedades: <%= @disease.respuesta %>. </h3>
+
+    <%= link_to "Ver Información Enfermedades (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+
+        <br> <hr>
+
+    <h3 class="title is-3"> Alergias: <%= @allergy.respuesta %>. </h3>
+
+    <%= link_to "Ver Información Alergias (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+
+        <br> <hr>
+
+    <h3 class="title is-3"> Medicamentos: <%= @medicine.respuesta %>. </h3>
+
+    <%= link_to "Ver Información Medicamentos (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+
+        <br> <hr>
+
+    <h3 class="title is-3"> Sustancias:
+
+        <% if @substance.fuma %>
+            <li> Fuma </li>
+        <% else %>
+            <li> No Fuma </li>
+        <%end%>
+
+        <% if @substance.toma %>
+            <li> Toma </li>
+        <% else %>
+            <li> No Toma </li>
+        <%end%>
+    </h3>
+    
+
+    <%= link_to "Ver Información Sustancias (Completa)...", controller: "patients", action: "show", id: @patient.id%>
+</div>
+
+
