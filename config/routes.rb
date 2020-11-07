@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   get 'diseases/:id' => 'diseases#show'
   
   get 'allergies/index'
-  get 'allergies/:id' => 'allergies#show'
   resources :allergies
+  get 'allergies/:id' => 'allergies#show'
+  
 
   resources :medicines
   get 'medicines/:id' => 'medicines#show'

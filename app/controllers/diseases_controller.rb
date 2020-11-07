@@ -5,12 +5,12 @@ class DiseasesController < ApplicationController
     
   end
 
-  def new
-    @disease = Disease.new
-  end
-
   def show
     @disease = Disease.find(params[:id])
+  end
+
+  def new
+    @disease = Disease.new
   end
 
   def create

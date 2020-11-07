@@ -1,14 +1,13 @@
 class AllergiesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
   end
 
+
+
   def new
     @allergy = Allergy.new
-  end
-
-  def show
-    @allergy = Allergy.find(params[:id])
   end
 
   def create
@@ -21,6 +20,10 @@ class AllergiesController < ApplicationController
     end
 
     render :new #Si no se guarda llena un arreglo con los errores
+  end
+
+  def show
+    @allergy = Allergy.find(params[:id])
   end
 
   private

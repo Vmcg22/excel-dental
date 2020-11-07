@@ -11,6 +11,7 @@ class PatientsController < ApplicationController
 
   def new
     @patient = Patient.new
+    @patient.celular = current_user.email
   end
 
   def create
