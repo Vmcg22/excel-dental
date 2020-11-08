@@ -4,8 +4,6 @@ class AllergiesController < ApplicationController
   def index
   end
 
-
-
   def new
     @allergy = Allergy.new
   end
@@ -24,6 +22,23 @@ class AllergiesController < ApplicationController
 
   def show
     @allergy = Allergy.find(params[:id])
+  end
+
+  def edit
+    @allergy = Allergy.find(params[:id])
+  end
+
+  def update
+    @allergy = Allergy.find(params[:id])
+
+    if @allergy.update allergy_params
+      return redirect_to url_for(:controller => :allergies, :action => :show)
+    end
+
+    render :edit
+  end
+
+  def delete
   end
 
   private

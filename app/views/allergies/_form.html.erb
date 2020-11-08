@@ -1,0 +1,54 @@
+
+<%= form_for @allergy, builder: BulmaFormBuilder do |form| %>
+    <div class="container">
+            
+        <!--FormBuilder para "div" con error-->
+        <%= form.form_error %>
+
+        <p class="is-large">
+            En esta vista usted ingresará los medicamentos a los que es alérgico de ser así. Si usted tiene alguna alergia, seleccione la casilla y escribala(s). Si no solo presione el botón "Guardar Alergia". 
+        </p>
+        <br> <br>
+        
+        <div class="field">
+            <label class="label is-medium">
+                ¿Usted es Alergico a algún medicamento?
+                <input class="check" type="checkbox" name="checAlergia" id="checAlergia" onchange="comprobar();">
+            </label>
+
+            <div class="control">
+                <%= form.text_field :respuesta, value: "Ninguna", readonly: true , class: 'input is-primary' %>
+            </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:respuesta)%>
+
+        </div>
+
+        <br>
+        
+        <div class="field is-grouped">
+            <div class="control">
+                <%= form.submit "Guardar Alergia", class: 'button is-primary'%>
+            </div>
+        </div>
+        
+    </div>
+<% end %>
+
+<script>
+    function comprobar()
+    {   
+        if (document.getElementById("checAlergia").checked)
+        {
+            document.getElementById('allergy_respuesta').value = "";
+            document.getElementById('allergy_respuesta').readOnly = false;
+            document.getElementById('allergy_respuesta').placeholder = "Ej. Penicilina, Aspirina, Ibuprofeno, etc";
+        }            
+        else
+        {
+            document.getElementById('allergy_respuesta').readOnly = true;
+            document.getElementById('allergy_respuesta').value = "Ninguna";
+        }
+    }
+</script>
