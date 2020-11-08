@@ -1,5 +1,5 @@
 class SubstancesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :index, :edit, :update, :show]
   
   def new
     @substance = Substance.new

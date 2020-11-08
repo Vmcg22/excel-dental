@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :index]
+  before_action :authenticate_user!, only: [:new, :create, :index, :edit, :update, :show]
 
   def index
     @patient = Patient.all()
