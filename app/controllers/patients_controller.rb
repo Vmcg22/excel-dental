@@ -35,6 +35,8 @@ class PatientsController < ApplicationController
     if @patient.update patient_params
       return redirect_to url_for(:controller => :patients, :action => :show)
     end
+
+    render :edit
   end
 
   def delete
