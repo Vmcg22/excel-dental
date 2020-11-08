@@ -21,6 +21,18 @@ class MedicinesController < ApplicationController
     render :new #Si no se guarda llena un arreglo con los errores
   end
 
+  def edit
+    @medicine = Medicine.find(params[:id])
+  end
+
+  def update
+    @medicine = Medicine.find(params[:id])
+
+    if @medicine.update(medicine_params)
+      return redirect_to url_for(:controller => :medicines, :action => :show)
+    end
+  end
+
   private 
 
   #Permite que solo permita los siguientes parámetros

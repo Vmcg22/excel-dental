@@ -21,6 +21,18 @@ class SubstancesController < ApplicationController
     render :new #Si no se guarda llena un arreglo con los errores
   end
 
+  def edit
+    @substance = Substance.find(params[:id])
+  end
+
+  def update
+    @substance = Substance.find(params[:id])
+
+    if @substance.update(substance_params)
+      return redirect_to url_for(:controller => :substances, :action => :show)
+    end
+  end
+
   private
 
   #Permite que solo permita los siguientes parámetros

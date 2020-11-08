@@ -1,0 +1,34 @@
+
+<%= form_for @substance do |form| %>
+    <div class="container">
+
+        <p class="is-large">
+            En esta vista usted ingresará las sustancias que ingiera de ser así. 
+        </p>
+        <br> <br>
+        
+        <div class="field">
+            <label class="label is-medium">
+                ¿Usted fuma?
+                <%= form.check_box :fuma, class: 'check'%>
+            </label>
+        </div>
+
+        <div class="field">
+            <label class="label is-medium">
+                ¿Usted toma?
+                <%= form.check_box :toma, class: 'check'%>
+            </label>
+        </div>
+        <br>
+        
+        <div class="field is-grouped">
+            <div class="control">
+                <%= form.submit class: 'button is-primary'%>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
+

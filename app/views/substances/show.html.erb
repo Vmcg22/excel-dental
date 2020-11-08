@@ -2,6 +2,13 @@
     <div class="notification is-primary"> 
         <p class="title is-2"> Sustancias </p>
     </div>
+  
+   <button class="button is-outlined">
+      <%= link_to "Volver Expediente Médico", controller: "welcome", action: "main"%>
+    </button>
+
+    <br> <br>
+
 
   <table class="table is-bordered">
     <thead>
@@ -26,7 +33,11 @@
             <li> No Toma </li>
         <%end%>
         </th>
-        <th> <button class="button is-black">Editar</button> </th>
+        
+        <th> <button class="button is-outlined">
+            <%= link_to "Editar", controller: "substances", action: "edit", id: @substance.id%>
+        </button>
+        </th>
       </tr>
     </tbody>
   </table>
