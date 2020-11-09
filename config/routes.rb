@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   resource :users, only: [:new, :create]
 
   resources :patients
+  delete 'patients/delete'
   get 'patients/:id' => 'patients#show'
-  
+    
   resources :diseases
   get 'diseases/:id' => 'diseases#show'
   

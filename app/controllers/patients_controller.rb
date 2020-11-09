@@ -40,6 +40,10 @@ class PatientsController < ApplicationController
   end
 
   def delete
+    @patient = Patient.find(params[:id])
+
+    @patient.destroy
+    redirect_to show
   end
 
   private

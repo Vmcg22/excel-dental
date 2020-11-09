@@ -55,6 +55,14 @@
     
 
     <%= link_to "Ver Información Sustancias (Completa)...", controller: "substances", action: "show", id: @patient.substance_id%>
+
+    <br> <hr>
+
+    <!--
+        <button class="button is-outlined">
+            <%= link_to "Eliminar Paciente", {controller: "patients", action: "delete", id: @patient.id}, method: :delete, data: {confirm: '¿Quieres Borrar este Paciente?'} %>
+        </button>
+    -->
 </div>
 
 
