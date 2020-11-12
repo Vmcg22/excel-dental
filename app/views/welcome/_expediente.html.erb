@@ -76,7 +76,8 @@
             <tbody>
                 <% @appointments.each() do |item| %>
                     <tr>
-                        <td> <%= item.fecha %> </td>
+                    
+                        <td> <%= item.fecha.strftime("%m/%d/%Y - %I:%M%p") %> </td>
                         <td> <%= item.motivo %> </td>
                         <td> 
                             <%= link_to "Mostrar", action: 'show', id: item.id  %> 
@@ -86,6 +87,8 @@
             </tbody>
         </table>
     <% end %>
+
+    <br> <hr>
 
     <!--
         <button class="button is-outlined">
