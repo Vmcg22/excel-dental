@@ -7,5 +7,6 @@ class Patient < ApplicationRecord
     belongs_to :disease, required: false
     belongs_to :allergy, required: false
     belongs_to :medicine, required: false
+    has_many :medical_appointments
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_05_012625) do
+ActiveRecord::Schema.define(version: 2020_11_12_021237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2020_11_05_012625) do
     t.string "respuesta"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "medical_appointments", force: :cascade do |t|
+    t.text "motivo"
+    t.datetime "fecha"
+    t.bigint "patient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["patient_id"], name: "index_medical_appointments_on_patient_id"
   end
 
   create_table "medical_files", force: :cascade do |t|
@@ -77,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_012625) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "medical_appointments", "patients"
   add_foreign_key "patients", "allergies"
   add_foreign_key "patients", "diseases"
   add_foreign_key "patients", "medicines"

@@ -1,0 +1,27 @@
+<%= form_for @medical_appointment do |form| %>
+    <div class="container">
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Crear Nueva Consulta Médica </p>
+        </div>
+
+        <div class="field">
+            <%= form.label :motivo, class: 'label is-large' %>
+
+            <div class="control"> 
+                <%= text_area_tag(:motivo , "" , autocomplete: "off", class: "textarea", placeholder: "Ej. Se realizó una limpieza dental en conjunto con un blanqueamiento.")  %>
+            </div>
+        </div>
+        
+        <%= datetime_local_field(:medical_appointment, :fecha, readOnly: true) %>
+
+        <br> <br>
+
+        <%= form.submit class: 'button is-primary'%>
+        <br> <br>
+        
+    </div>
+
+    
+    
+<% end %>

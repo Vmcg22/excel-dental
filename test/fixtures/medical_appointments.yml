@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  motivo: MyText
+  fecha: 2020-11-11 20:12:37
+  patient: one
+
+two:
+  motivo: MyText
+  fecha: 2020-11-11 20:12:37
+  patient: two
