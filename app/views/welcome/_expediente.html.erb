@@ -60,16 +60,32 @@
 
     <h3 class="title is-3"> Consultas Médicas:</h3>
 
-    <div class="columns is-desktop is-multiline">
-        <% @appointments.each do |item| %>
-            <div class="card column is-4">
-                <p class="title is-4"> 
-                    <%= item.fecha %>
-                    <%= item.motivo %>
-                </p>
-            </div>
-        <% end %>
-    </div>
+
+    <%= link_to('Crear Nueva Consulta Médica', new_medical_appointment_path, class: 'button is-primary') %>
+    <br> <br>
+
+    <% if !@appointments.nil?%>
+        <table class="table is-bordered">
+            <thead>
+                <tr>
+                    <th> Fecha y Hora</th>
+                    <th> Motivo </th>
+                    <th> Acciones </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @appointments.each() do |item| %>
+                    <tr>
+                        <td> <%= item.fecha %> </td>
+                        <td> <%= item.motivo %> </td>
+                        <td> 
+                            <%= link_to "Mostrar", action: 'show', id: item.id  %> 
+                        </td>
+                    </tr>
+                <%end%>
+            </tbody>
+        </table>
+    <% end %>
 
     <!--
         <button class="button is-outlined">

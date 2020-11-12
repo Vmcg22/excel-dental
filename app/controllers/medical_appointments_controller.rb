@@ -15,7 +15,7 @@ class MedicalAppointmentsController < ApplicationController
 
     if @medical_appointment.save
       #return redirect_to new_users_path
-      return redirect_to url_for(:controller => :welcome, :action => :main)
+      return redirect_to url_for(:controller => :welcome, :action => :show, :id => @medical_appointment.patient_id)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores
