@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   resources :medical_files
 
   resources :medical_appointments
+  get 'medical_appointments/:id' => 'medical_appointments#show'
   
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

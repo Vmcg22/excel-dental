@@ -21,6 +21,20 @@ class MedicalAppointmentsController < ApplicationController
     render :new #Si no se guarda llena un arreglo con los errores
   end
 
+  def edit
+    @medical_appointment = MedicalAppointment.find(params[:id])
+  end
+
+  def update
+    @medical_appointment = MedicalAppointment.find(params[:id])
+
+    if @medical_appointment.update medical_appointment_params
+      return redirect_to url_for(:controller => :welcome, :action => :show)
+    end
+
+    render :edit
+  end
+
   private
 
   def medical_appointment_params
