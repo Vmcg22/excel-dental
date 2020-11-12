@@ -9,7 +9,7 @@
             <%= form.label :motivo, class: 'label is-large' %>
 
             <div class="control"> 
-                <%= text_area_tag(:motivo , "" , autocomplete: "off", class: "textarea", placeholder: "Ej. Se realizó una limpieza dental en conjunto con un blanqueamiento.")  %>
+                <%= form.text_area :motivo, class: 'textarea',  placeholder: "Ej. Se realizó una limpieza dental en conjunto con un blanqueamiento."%>
             </div>
         </div>
         

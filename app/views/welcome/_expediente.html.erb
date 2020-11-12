@@ -58,6 +58,19 @@
 
     <br> <hr>
 
+    <h3 class="title is-3"> Consultas Médicas:</h3>
+
+    <div class="columns is-desktop is-multiline">
+        <% @appointments.each do |item| %>
+            <div class="card column is-4">
+                <p class="title is-4"> 
+                    <%= item.fecha %>
+                    <%= item.motivo %>
+                </p>
+            </div>
+        <% end %>
+    </div>
+
     <!--
         <button class="button is-outlined">
             <%= link_to "Eliminar Paciente", {controller: "patients", action: "delete", id: @patient.id}, method: :delete, data: {confirm: '¿Quieres Borrar este Paciente?'} %>

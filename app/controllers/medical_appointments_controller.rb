@@ -8,11 +8,14 @@ class MedicalAppointmentsController < ApplicationController
   end
 
   def create
-    @medical_appointment = MedicalAppointment.new(medical_appointment_params)
+    medical_appointment = MedicalAppointment.new(medical_appointment_params)
+    patient = Patient.find_by_user_id(current_user.id)
+    medical_appointment.patient_id = patient.id
+    @medical_appointment = medical_appointment
 
     if @medical_appointment.save
       #return redirect_to new_users_path
-      render :new
+      return redirect_to url_for(:controller => :welcome, :action => :main)
     end
 
     render :new #Si no se guarda llena un arreglo con los errores
