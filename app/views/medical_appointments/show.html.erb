@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="notification is-primary"> 
+        <p class="title is-2"> Consulta Médica del <%= @medical_appointment.fecha.strftime("%m/%d/%Y - %I:%M%p") %> </p>
+    </div>
+  
+  <th>  
+    <button class="button is-outlined">
+      <%= link_to "Volver Expediente Médico", controller: "welcome", action: "show", id: @medical_appointment.patient_id%>
+    </button>
+  </th>
+
+  <br> <br>
+
+  <table class="table is-bordered">
+    <thead>
+      <tr>
+        <th><abbr>Motivo de Consulta</abbr></th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th> <%= @medical_appointment.motivo%> </th>
+        <th> <button class="button is-outlined">
+            <%= link_to "Editar", controller: "medical_appointments", action: "edit", id: @medical_appointment.id%>
+        </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

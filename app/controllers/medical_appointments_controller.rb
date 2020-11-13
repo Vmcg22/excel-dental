@@ -4,7 +4,11 @@ class MedicalAppointmentsController < ApplicationController
 
   def new
     @medical_appointment = MedicalAppointment.new
-    @medical_appointment.fecha = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
+    @medical_appointment.fecha = Time.now.strftime("%d/%m/%Y %H:%M")
+  end
+
+  def show
+    @medical_appointment = MedicalAppointment.find(params[:id])
   end
 
   def create
@@ -29,7 +33,7 @@ class MedicalAppointmentsController < ApplicationController
     @medical_appointment = MedicalAppointment.find(params[:id])
 
     if @medical_appointment.update medical_appointment_params
-      return redirect_to url_for(:controller => :welcome, :action => :show)
+      return redirect_to url_for(:controller => :welcome, :action => :show, :id => @medical_appointment.patient_id)
     end
 
     render :edit
