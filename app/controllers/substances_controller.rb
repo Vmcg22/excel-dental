@@ -7,6 +7,7 @@ class SubstancesController < ApplicationController
 
   def show
     @substance = Substance.find(params[:id])
+    @patient = Patient.find_by_substance_id(@substance.id)
   end
 
   def create

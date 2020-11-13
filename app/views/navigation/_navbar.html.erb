@@ -1,34 +1,48 @@
 <div class="container">
     
-<nav class="navbar is-white" role="navigation" aria-label="main navigation">
-<div id="navbarBasicExample" class="navbar-menu">
-  <div class="navbar-start">
-    <a class="" href="">
-      <!-- <img src="<=% asset_path '../welcome/Imagenes/logo.jpg' %>" width="112" height="28">-->
-      <%= image_tag '/assets/welcome/logo.jpg', size: 120 %>
-    </a>
-  </div>
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="" href="">
+          <!-- <img src="<=% asset_path '../welcome/Imagenes/logo.jpg' %>" width="112" height="28">-->
+          <%= image_tag '/assets/welcome/logo.jpg', size: 120 %>
+        </a>
+      </div>
 
-  <div class="navbar-end">
-    <div class="navbar-item">
-      <div class="buttons">
-        <% if user_signed_in? %>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              <%= current_user.name %>
-            </a>
-            <div class="navbar-dropdown">
-              <%= link_to('Salir', logout_path, class: 'navbar-item button is-danger') %>
-            </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+          <a class="navbar-item">
+          </a>
+
+          <a class="navbar-item" href="/patients">
+            Pacientes
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <% if user_signed_in? %>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  <%= current_user.name %>
+                </a>
+                <div class="navbar-dropdown">
+                  <%= link_to('Salir', logout_path, class: 'navbar-item button is-danger') %>
+                </div>
+              </div>
+            <% else %>
+              <%= link_to('Regístrate', signup_path, class: 'button is-primary') %>
+              <%= link_to('Iniciar Sesión', login_path, class: 'button is-light') %>
+            <% end %>
           </div>
-        <% else %>
-          <%= link_to('Regístrate', signup_path, class: 'button is-primary') %>
-          <%= link_to('Iniciar Sesión', login_path, class: 'button is-light') %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</nav>
+  </nav>
 
 </div>

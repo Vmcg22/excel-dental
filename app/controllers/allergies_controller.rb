@@ -22,6 +22,7 @@ class AllergiesController < ApplicationController
 
   def show
     @allergy = Allergy.find(params[:id])
+    @patient = Patient.find_by_allergy_id(@allergy.id)
   end
 
   def edit

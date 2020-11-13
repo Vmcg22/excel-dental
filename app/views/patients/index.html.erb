@@ -1,21 +1,27 @@
-<div class="notification is-primary"> 
-            <p class="title is-2"> Pacientes </p>
-</div>
+<div class="container">
 
-<div class="columns is-desktop is-multiline">
-    <% @patient.each do |item| %>
-        <div class="card column is-4">
-            <p class="title is-4"> 
-                <%= item.nombres %>
-                <%= item.apellidos %>
-                (<%= item.user_id%>)
-            </p>
-            <p class="subtitle is-6"> 
-                <%= item.celular %>
-            </p>  
-            <p class="subtitle is-6"> 
-                <%= link_to "Expediente Médico", controller: "welcome", action: "show", id: item %>
-            </p>  
-        </div>
-    <% end %>
+    <%= render "navigation/navbar" %>
+
+    <div class="notification is-primary"> 
+            <p class="title is-2"> Pacientes </p>
+    </div>
+
+    <div class="columns is-desktop is-multiline">
+        <% @patient.each do |item| %>
+            <div class="card column is-4">
+                <p class="title is-4"> 
+                    <%= item.nombres %>
+                    <%= item.apellidos %>
+                    (<%= item.user_id%>)
+                </p>
+                <p class="subtitle is-6"> 
+                    <%= item.celular %>
+                </p>  
+                <p class="subtitle is-6"> 
+                    <%= link_to "Expediente Médico", controller: "welcome", action: "show", id: item %>
+                </p>  
+            </div>
+        <% end %>
+    </div>
+
 </div>

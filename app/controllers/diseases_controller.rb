@@ -6,6 +6,7 @@ class DiseasesController < ApplicationController
 
   def show
     @disease = Disease.find(params[:id])
+    @patient = Patient.find_by_disease_id(@disease.id)
   end
 
   def new
