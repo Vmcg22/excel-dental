@@ -8,8 +8,14 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       #redirect_to welcome_main_path, notice: 'Sesión Iniciada'
-      patient = Patient.find_by_user_id(current_user.id)
-      return redirect_to url_for(:controller => :welcome, :action => :show, :id => patient.id)
+      usuario = User.where("name like '%Dr%'")
+      if user.id == 42
+        return redirect_to url_for(:controller => :patients, :action => :index)
+      else
+        patient = Patient.find_by_user_id(current_user.id)
+        return redirect_to url_for(:controller => :welcome, :action => :show, :id => patient.id)
+      end
+      
     else
       flash.now[:alert] = 'El Correo o Contraseña es Incorrecto'
       render :new
