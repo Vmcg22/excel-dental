@@ -5,6 +5,7 @@ class MedicalAppointmentsController < ApplicationController
   def new
     @medical_appointment = MedicalAppointment.new
     @medical_appointment.fecha = Time.now.strftime("%d/%m/%Y %H:%M")
+    @medical_appointment.assign_attributes({:patient_id => params[:id]})
   end
 
   def show
@@ -12,10 +13,7 @@ class MedicalAppointmentsController < ApplicationController
   end
 
   def create
-    medical_appointment = MedicalAppointment.new(medical_appointment_params)
-    patient = Patient.find_by_user_id(current_user.id)
-    medical_appointment.patient_id = patient.id
-    @medical_appointment = medical_appointment
+    @medical_appointment = MedicalAppointment.new(medical_appointment_params)
 
     if @medical_appointment.save
       #return redirect_to new_users_path
@@ -42,6 +40,6 @@ class MedicalAppointmentsController < ApplicationController
   private
 
   def medical_appointment_params
-    params.require(:medical_appointment).permit(:motivo, :fecha)
+    params.require(:medical_appointment).permit(:motivo, :fecha, :patient_id)
   end
 end

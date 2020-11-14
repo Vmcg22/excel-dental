@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'currents/new'
-  get 'currents/create'
   #Ruta, to => controlador con acción a responder esa "url"
   get 'signup', to: 'users#new' #Registro de usuario.
   get 'login', to: 'sessions#new' #Solicita fórmulario de auth.

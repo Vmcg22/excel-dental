@@ -3,7 +3,8 @@
 
 <div class="container">
     <div class="notification is-primary"> 
-        <p class="title is-2"> Expediente Médico de <%= @patient.nombres %></p>
+        <p class="title is-2"> Expediente Médico de <%= @patient.nombres%></p>
+        <p class="title is-2"> ID <%= @patient.id%></p>
     </div>
 
     <h1 class="title is-1"> <%= @patient.nombres + " " + @patient.apellidos %> </h1>
@@ -21,24 +22,28 @@
         <br> <hr>
 
     <h3 class="title is-3"> Enfermedades: <%= @disease.respuesta %>. </h3>
+    <h3 class="title is-3"> ID: <%= @disease.id %>. </h3>
 
     <%= link_to "Ver Información Enfermedades (Completa)...", controller: "diseases", action: "show", id: @patient.disease_id%>
 
         <br> <hr>
 
     <h3 class="title is-3"> Alergias: <%= @allergy.respuesta %>. </h3>
+    <h3 class="title is-3"> ID: <%= @allergy.id %>. </h3>
 
     <%= link_to "Ver Información Alergias (Completa)...", controller: "allergies", action: "show", id: @patient.allergy_id%>
 
         <br> <hr>
 
     <h3 class="title is-3"> Medicamentos: <%= @medicine.respuesta %>. </h3>
+    <h3 class="title is-3"> ID: <%= @medicine.id %>. </h3>
 
     <%= link_to "Ver Información Medicamentos (Completa)...", controller: "medicines", action: "show", id: @patient.medicine_id%>
 
         <br> <hr>
 
     <h3 class="title is-3"> Sustancias:
+    <h3 class="title is-3"> ID: <%= @substance.id %>. </h3>
 
         <% if @substance.fuma %>
             <li> Fuma </li>
@@ -60,8 +65,9 @@
 
     <h3 class="title is-3"> Consultas Médicas:</h3>
 
+    
+    <%= link_to "Crear Nueva Consulta Médica", controller: "medical_appointments", action: "new", id: @patient.id%>
 
-    <%= link_to('Crear Nueva Consulta Médica', new_medical_appointment_path, class: 'button is-primary', id: @patient.id) %>
     <br> <br>
 
     <% if !@appointments.nil?%>

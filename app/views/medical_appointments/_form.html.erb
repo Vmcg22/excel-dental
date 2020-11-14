@@ -11,6 +11,14 @@
         
         <%= datetime_local_field(:medical_appointment, :fecha, readOnly: true) %>
 
+        <div class="field">
+            <%= form.label :patient_id, class: 'label is-large' %>
+
+            <div class="control"> 
+                <%= form.text_field :patient_id%>
+            </div>
+        </div>
+
         <br> <br>
 
         <%= form.submit class: 'button is-primary'%>
