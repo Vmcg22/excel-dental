@@ -6,9 +6,9 @@ es:
         other: 'Usuarios'
     attributes:
       user:
-        name: 'Nombre'
-        email: 'Número de Teléfono'
-        password: 'Contraseña'
+        name: 'Nombre*'
+        email: 'Número de Teléfono*'
+        password: 'Contraseña*'
     errors:
       models:
         user:

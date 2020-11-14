@@ -6,15 +6,15 @@ es:
         other: 'Pacientes'
     attributes:
       patient:
-        nombres: 'Nombres'
-        apellidos: 'Apellidos'
-        edad: 'Edad'
-        fecha_nacimiento: 'Fecha de Nacimiento'
-        sexo: 'Sexo'
-        colonia: 'Colonia'
-        direccion: 'Dirección'
+        nombres: 'Nombres*'
+        apellidos: 'Apellidos*'
+        edad: 'Edad*'
+        fecha_nacimiento: 'Fecha de Nacimiento*'
+        sexo: 'Sexo*'
+        colonia: 'Colonia*'
+        direccion: 'Dirección*'
         telefono: 'Teléfono'
-        celular: 'Celular'
+        celular: 'Celular*'
     errors:
       models:
         patient:

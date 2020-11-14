@@ -15,9 +15,11 @@
           <a class="navbar-item">
           </a>
 
-          <a class="navbar-item" href="/patients">
-            Pacientes
-          </a>
+          <% if current_user.id == 42%>
+            <a class="navbar-item" href="/patients">
+              Pacientes
+            </a>
+          <%end%>
 
         </div>
       </div>

@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="notification is-primary"> 
-        <p class="title is-2"> Expediente Médico de <%= @patient.nombres%></p>
+        <p class="title is-2"> Expediente Médico de (<%= @patient.nombres%> )</p>
     </div>
 
     <h1 class="title is-1"> <%= @patient.nombres + " " + @patient.apellidos %> </h1>
@@ -60,10 +60,16 @@
 
     <h3 class="title is-3"> Consultas Médicas:</h3>
 
+    <% if current_user.id == 42 %>
+        <div class="buttons">
+            <button class="button is-rounded">
+                <%= link_to "Crear Nueva Consulta Médica", controller: "medical_appointments", action: "new", id: @patient.id%>
+            </button>
+        </div>
+    <%end%>
     
-    <%= link_to "Crear Nueva Consulta Médica", controller: "medical_appointments", action: "new", id: @patient.id%>
 
-    <br> <br>
+    <br>
 
     <% if !@appointments.nil?%>
         <table class="table is-bordered">
