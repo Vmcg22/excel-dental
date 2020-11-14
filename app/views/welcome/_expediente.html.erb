@@ -61,7 +61,7 @@
     <h3 class="title is-3"> Consultas Médicas:</h3>
 
 
-    <%= link_to('Crear Nueva Consulta Médica', new_medical_appointment_path, class: 'button is-primary') %>
+    <%= link_to('Crear Nueva Consulta Médica', new_medical_appointment_path, class: 'button is-primary', id: @patient.id) %>
     <br> <br>
 
     <% if !@appointments.nil?%>
