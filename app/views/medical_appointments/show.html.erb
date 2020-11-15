@@ -15,16 +15,21 @@
     <thead>
       <tr>
         <th><abbr>Motivo de Consulta</abbr></th>
+        <% if current_user.id == 42 || current_user.id == 45 %>
         <th>Acciones</th>
+        <%end%>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th> <%= @medical_appointment.motivo%> </th>
-        <th> <button class="button is-outlined">
-            <%= link_to "Editar", controller: "medical_appointments", action: "edit", id: @medical_appointment.id%>
-        </button>
-        </th>
+        <% if current_user.id == 42 || current_user.id == 45 %>
+          <th> 
+            <button class="button is-outlined">
+              <%= link_to "Editar", controller: "medical_appointments", action: "edit", id: @medical_appointment.id%>
+            </button>
+          </th>
+        <%end%>
       </tr>
     </tbody>
   </table>
