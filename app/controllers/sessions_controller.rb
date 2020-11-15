@@ -11,9 +11,12 @@ class SessionsController < ApplicationController
 
       if user.id == 42
         return redirect_to url_for(:controller => :patients, :action => :index)
-      else
+      end
+      if
         patient = Patient.find_by_user_id(current_user.id)
         return redirect_to url_for(:controller => :welcome, :action => :show, :id => patient.id)
+      else
+        return redirect_to url_for(:controller => :patients, :action => :new)
       end
       
     else

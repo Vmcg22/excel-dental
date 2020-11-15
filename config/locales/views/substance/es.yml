@@ -1,0 +1,13 @@
+es:
+  helpers:
+    submit:
+      substance:
+        create: "Guardar %{model}"
+        update: "Editar %{model}"
+  substances:
+    new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
+    edit:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'

@@ -1,0 +1,9 @@
+es:
+  activerecord:
+    models:
+      substance:
+        one: 'Sustancia'
+        other: 'Sustancias'
+
+
+            
