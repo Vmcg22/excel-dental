@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       #redirect_to welcome_main_path, notice: 'Sesión Iniciada'
 
-      if user.id == 42
+      if user.id == 45
         return redirect_to url_for(:controller => :patients, :action => :index)
       end
       if
