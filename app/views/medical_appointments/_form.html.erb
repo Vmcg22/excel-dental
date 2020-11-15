@@ -1,15 +1,27 @@
 <%= form_for @medical_appointment do |form| %>
     <div class="container">
 
+        <%- if @medical_appointment.errors.any? %>
+            <div class="notification is-danger">
+                Lo sentimos, al parecer algo salió mal.
+            </div>
+        <% end %>
+
         <div class="field">
-            <%= form.label :motivo, class: 'label is-large' %>
+            <%= form.label :motivo ,"Motivo de Consulta:", class: 'label is-large' %>
 
             <div class="control"> 
                 <%= form.text_area :motivo, class: 'textarea',  placeholder: "Ej. Se realizó una limpieza dental en conjunto con un blanqueamiento."%>
             </div>
+
+            <%- if @medical_appointment.errors[:motivo].any? %>
+                <div class="help is-danger">
+                    No dejar el campo (Motivo de Consulta) vacío.
+                </div>
+            <%end%>
         </div>
         
-        <%= datetime_local_field(:medical_appointment, :fecha, readOnly: true) %>
+        <%= datetime_local_field(:medical_appointment, :fecha) %>
 
         <div class="field" style="display: none">
             <%= form.label :patient_id, class: 'label is-large' %>
@@ -21,7 +33,7 @@
 
         <br> <br>
 
-        <%= form.submit class: 'button is-primary'%>
+        <%= form.submit "Guardar Consulta Médica" ,class: 'button is-primary'%>
         <br> <br>
         
     </div>

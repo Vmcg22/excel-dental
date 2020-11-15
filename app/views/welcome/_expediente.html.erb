@@ -87,15 +87,9 @@
                         <td> <%= item.fecha.strftime("%m/%d/%Y - %I:%M%p") %> </td>
                         <td> <%= item.motivo %> </td>
                         <td> 
-                        <button class="button is-outlined">
-                            <%= link_to "Mostrar", controller: "medical_appointments", action: "show", id: item.id%>
-                        </button>
-
-                        <!--
                             <button class="button is-outlined">
-                                <%= link_to "Editar", controller: "substances", action: "edit", id: @substance.id%>
+                                <%= link_to "Mostrar", controller: "medical_appointments", action: "show", id: item.id%>
                             </button>
-                        -->
                         </td>
                     </tr>
                 <%end%>
