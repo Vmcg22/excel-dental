@@ -1,10 +1,10 @@
 es:
   helpers:
     submit:
-      disease:
+      medicine:
         create: "Guardar %{model}"
         update: "Editar %{model}"
-  diseases:
+  medicines:
     new:
       form:
         error: 'Lo sentimos, al parecer algo salió mal.'

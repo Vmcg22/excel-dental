@@ -1,7 +1,10 @@
 
-<%= form_for @medicine do |form| %>
-
+<%= form_for @medicine, builder: BulmaFormBuilder do |form| %>
     <div class="container">
+
+        <!--FormBuilder para "div" con error-->
+        <%= form.form_error %>
+
         <p class="is-large">
             En esta vista usted ingresará los medicamentos que consuma. Si usted toma algún medicamento, seleccione la casilla y escribalo(s). Si no, solo presione el botón "Guardar Medicamento". 
         </p>
@@ -16,6 +19,9 @@
             <div class="control">
                 <%= form.text_field :respuesta, value: "Ninguno", readonly: true , class: 'input is-primary' %>
             </div>
+
+            <!--FormBuilder para "p" con error-->
+            <%= form.field_error(:respuesta)%>
 
         </div>
 

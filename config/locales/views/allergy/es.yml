@@ -1,9 +1,13 @@
 es:
   helpers:
     submit:
-      allery:
+      allergy:
         create: "Guardar %{model}"
+        update: "Editar %{model}"
   allergies:
     new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
+    edit:
       form:
         error: 'Lo sentimos, al parecer algo salió mal.'

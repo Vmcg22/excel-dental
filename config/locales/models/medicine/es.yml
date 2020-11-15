@@ -1,0 +1,18 @@
+es:
+  activerecord:
+    models:
+      medicine:
+        one: 'Medicamento'
+        other: 'Medicamentos'
+    attributes:
+      medicine:
+        respuesta: 'Respuesta'
+    errors:
+      models:
+        medicine:
+          attributes:
+            respuesta:
+              blank: 'No dejar el campo de (Medicamentos) vacío.'
+
+
+            

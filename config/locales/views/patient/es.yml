@@ -3,7 +3,11 @@ es:
     submit:
       patient:
         create: "Guardar %{model}"
+        update: "Editar %{model}"
   patients:
     new:
+      form:
+        error: 'Lo sentimos, al parecer algo salió mal.'
+    edit:
       form:
         error: 'Lo sentimos, al parecer algo salió mal.'
