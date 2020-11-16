@@ -14,9 +14,12 @@ Rails.application.routes.draw do
 
   resource :users, only: [:new, :create]
 
-  resources :patients
-  delete 'patients/delete'
+ 
+  resources :patients, except: [:destroy, :show]
+  get 'patients/delete'
   get 'patients/:id' => 'patients#show'
+  
+
     
   resources :diseases
   get 'diseases/:id' => 'diseases#show'

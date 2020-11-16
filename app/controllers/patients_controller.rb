@@ -41,9 +41,20 @@ class PatientsController < ApplicationController
 
   def delete
     @patient = Patient.find(params[:id])
-
+    MedicalAppointment.where(patient_id: @patient.id).destroy_all
+    user_id = @patient.user_id
+    disease_id = @patient.disease_id
+    allergy_id = @patient.allergy_id
+    medicine_id = @patient.medicine_id
+    substance_id = @patient.substance_id
     @patient.destroy
-    redirect_to show
+    User.destroy(user_id)
+    Disease.destroy(disease_id)
+    Allergy.destroy(allergy_id)
+    Medicine.destroy(medicine_id)
+    Substance.destroy(substance_id)
+    
+    redirect_to patients_path
   end
 
   private
