@@ -18,11 +18,19 @@
                     <%= item.celular %>
                 </p>  
                 <p class="subtitle is-6"> 
-                    <%= link_to "Expediente Médico", controller: "welcome", action: "show", id: item %>
-                    <%= link_to 'Borrar', {action: 'delete', id: item.id}, method: :delete, data: { confirm: 'Are you sure'} %>
+                    <button class="button is-outlined" id="nuevo">
+                        <%= link_to "Expediente Médico", controller: "welcome", action: "show", id: item %> 
+                    </button>
+
+                    <button class="button is-outlined">
+                        <%= link_to "Borrar", controller: "patients", action: "delete", id: item.id %> 
+                    </button>
                 </p>  
+
             </div>
         <% end %>
     </div>
 
 </div>
+
+

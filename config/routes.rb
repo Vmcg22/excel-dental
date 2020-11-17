@@ -17,6 +17,7 @@ Rails.application.routes.draw do
  
   resources :patients, except: [:destroy, :show]
   get 'patients/delete'
+  get 'patients/destroy' 
   get 'patients/:id' => 'patients#show'
   
 

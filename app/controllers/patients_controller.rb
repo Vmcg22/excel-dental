@@ -41,6 +41,10 @@ class PatientsController < ApplicationController
 
   def delete
     @patient = Patient.find(params[:id])
+  end
+
+  def destroy
+    @patient = Patient.find(params[:id])
     MedicalAppointment.where(patient_id: @patient.id).destroy_all
     user_id = @patient.user_id
     disease_id = @patient.disease_id
