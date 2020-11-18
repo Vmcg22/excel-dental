@@ -3,8 +3,21 @@
 <%= form_tag login_path do |form| %>
 
     <div class="container">
-        <h1 class="title"> Login </h1>
+
+        <div class="notification is-primary"> 
+            <p class="title is-2"> Iniciar Sesión</p>
+        </div>
         
+        <div class="buttons">
+            <div class="buttons">
+                <button class="button is-outlined">
+                    <%= link_to "Salir", :back %>
+                </button> 
+            </div>
+        </div>
+
+        <br> <br>
+
         <div class="field">
             <label class="label">Número de Teléfono</label>
             

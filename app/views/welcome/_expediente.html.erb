@@ -2,6 +2,24 @@
 <br>
 
 <div class="container">
+    
+    <% if current_user.id == 42 || current_user.id == 45 %>
+        <div class="buttons">
+           <button class="button is-outlined">
+                <%= link_to "Volver a Expedientes Médicos de Pacientes ", controller: "patients", action: "index"%>
+            </button> 
+        </div>
+
+    <% else %>
+        <div class="buttons">
+           <button class="button is-outlined">
+                <%= link_to "Salir", :back %>
+            </button> 
+        </div>
+    <%end%>
+
+
+    
     <div class="notification is-primary"> 
         <p class="title is-2"> Expediente Médico de (<%= @patient.nombres%> )</p>
     </div>
