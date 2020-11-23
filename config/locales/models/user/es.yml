@@ -17,6 +17,6 @@ es:
               blank: 'No dejar el campo (Nombre) vacío.'
             email:
               blank: 'No dejar el campo (Número de Teléfono) vacío.'
-              taken: 'Este correo ya está disponible.'
+              taken: 'Este Número de Teléfono ya está disponible.'
             password: 
               blank: 'No dejar el campo (Contraseña) vacío.'
