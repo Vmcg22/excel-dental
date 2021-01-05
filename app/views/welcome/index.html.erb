@@ -1,321 +1,172 @@
-<link href="/assets/stylesheets/welcome.scss" media="screen" rel="stylesheet" />
-<div class="container">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-  
-  <a class="" href="">
-      <!-- <img src="<=% asset_path '../welcome/Imagenes/logo.jpg' %>" width="112" height="28">-->
-      <%= image_tag '/assets/welcome/logo.jpg', size: 120 %>
-    </a>
+<section class="hero is-White is-medium is-bold">
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="" href="https://bulma.io">
+                    
+                        <%= image_tag '/assets/welcome/logo.jpg', size: "150x150" %>
+                    
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="tabs is-right">
+                            <ul>
+                                <li class="is-active"><a>Inicio</a></li>
+                                <li><a href="">Acerca de</a></li>
+                                <li><a href="">Contactanos</a></li>
+                            </ul>
 
+                            <span class="navbar-item">
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+                              <%= link_to signup_path, class: "button is-primary" do %>
+                                <span class="icon">
+                                  <i class="fas fa-user-plus"></i>
+                                </span>
+                                <span title="Hello from the other side">Regístrate</span>
+                              <% end %>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Inicio
-      </a>
+                            </span>
 
-      <a class="navbar-item">
-        Acerca de
-      </a>
-
-       <a class="navbar-item">
-        Contactanos
-      </a>
-
-      </div>
+                            <span class="navbar-item">
+                                <%= link_to login_path, class: "button is-primary is-outlined" do %>
+                                <span class="icon">
+                                  <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                <span title="Hello from the other side">Iniciar Sesión</span>
+                              <% end %>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
+</section>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <%= link_to('Regístrate', signup_path, class: 'button is-primary') %>
-          <%= link_to('Iniciar Sesión', login_path, class: 'button is-link is-light') %>
+<section>
+    <figure class="image is-2by1">
+        <%= image_tag '/assets/welcome/principalFinal3.png', size: 120 %>
+    </figure>
+</section>
+
+<section>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+
+            </h1>
+            <h2 class="subtitle">
+            </h2>
         </div>
-      </div>
     </div>
-  </div>
-</nav>
-
-<div class="principal">
-  <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
-</div>
-
-</div>
+</section>
 
 
-<div class="chatbot-container" id="chatbot-container">
-  <!-- <div class="chatbot-dialog"> -->
-  <div class="chatbot-header">
-    <p>EXCEL Dental</p> <p class="chatbot-close" onclick="showOrHideChat()">cerrar</p>
-  </div>
-  <div class="chatbot-messages" id="chatbot-messages">
-  
-  </div>
-  <div class="chatbot-controls">
-    <form action="" onsubmit="return false" id="chatbot-form" autocomplete="off">
-      <input type="text" class="chatbot-msg-input" id="chatbot-msg-input" placeholder="Pregúntame algo y presiona enter">
-    </form>
-  </div>
-  <!-- </div> -->
-</div>
-<div class="chatbot-button" id="chatbot-button" onclick="showOrHideChat()">
-  
-    <svg class="chatbot-button-text" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M4,18h1h1v4.081L11.101,18H12h4c1.103,0,2-0.897,2-2V8c0-1.103-0.897-2-2-2H4C2.897,6,2,6.897,2,8v8 C2,17.103,2.897,18,4,18z"></path><path d="M20,2h-1h-2.002H9H8C6.897,2,6,2.897,6,4h3h7.586H18c1.103,0,2,0.897,2,2v1.414V11v3c1.103,0,2-0.897,2-2v-1V7V5V4 C22,2.897,21.103,2,20,2z"></path></svg>
-  
-</div>
+<section class="container">
+    <div class="columns features">
+        <div class="column is-4">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4>¿Quienes somos? </h4>
+                        <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
+                            Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut
+                            consequat semper viverra nam.</p>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-4">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4>Misión</h4>
+                        <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed
+                            arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas
+                            cmonsu songue. Phasellus vestibulum lorem
+                            sed risus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-4">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4> Visión</h4>
+                        <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla
+                            pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra
+                            maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<style>
-  .chatbot-container {
-  position: fixed;
-  right: 14px;
-  bottom: 14px;
-  width: 315px;
-  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
-  font-size: .9375rem;
-  box-shadow: 0px 0px 2px 4px #ccc;
-  border-radius: 12px;
-  z-index: 2500;
-  /* display: none; */
+    <div class="intro column is-8 is-offset-2">
+    <!--
+        <h2 class="title">Perfect for developers or designers!</h2><br>
+        <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a.
+            Neque egestas congue quisque egestas diam in arcu cursus.</p>
+            -->
+    </div>
 
-  transform-origin: bottom right;
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.4s, opacity 0.2s;
-}
+</section>
 
-.chatbot-header {
-  background: #51b481;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 10px;
-  color: white;
-  font-size: 16px;
-  border-radius: 12px 12px 0px 0px
-}
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3 is-offset-2">
+                <h2><strong>Contactanos</strong></h2>
+                <ul>
+                    <li><a href="https://goo.gl/maps/sCjVF9JcfT8tZNST8" target="_blank"> <i
+                                class="fas fa-map-marker-alt"></i> Av. Revolución #7513,Nuevo Laredo, Tamps, 88120. </a>
+                    </li>
 
-.chatbot-controls {
-  display: block;
-  background: #D4EFDF;
-  height: 43px;
-  border: none;
-  border-radius: 0px 0px 12px 12px;
-  display: flex;
-  justify-content: center;
-}
+                    <li><a href="tel:+528671960471"> <i class="fas fa-phone-square-alt"></i> Tel. (867) 196-0471</a>
+                    </li>
 
-.chatbot-msg-input {
-  z-index: 10;
-  padding: 3px 12px;
-  width: 271px;
-  height: 29px;
-  border-radius: 20px;
-  border: 1px solid #555;
-  background-color: #FFF;
-  color: #000;
-  /* margin: 0px 3px 3px 3px; */
-  /* margin-bottom: 3px; */
-}
+                    <li><a href="tel:+528671264856"> <i class="fas fa-phone-square-alt"></i> Tel.Cel. (867) 126-4856</a>
+                    </li>
 
-.chatbot-msg-input[type=text]:focus {
-  outline-width: 0px;
-  width: 271px;
-  height: 29px;
-  border: 1px solid #555;
-  box-shadow: 0px 0px 3px 1px #ccc;
-}
+                    <li><a href="#" target="_blank"> <i class="fas fa-envelope"></i> Envíanos un Correo Electrónico</a>
+                    </li>
 
-.chatbot-msg-input::placeholder {
-  color: #000;
-  opacity: 0.4;
-}
+                    <li><a href="https://www.facebook.com/exceldental01" target="_blank"> <i
+                                class="fab fa-facebook-square"></i> Vísitanos en Facebook</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column is-3">
+                <h2><strong>Horarios</strong></h2>
+            </div>
 
-.chatbot-messages {
-  display: flex;
-  flex-direction: column;
-  background: #D4EFDF;
-  height: 350px;
-  overflow-y: auto;
-}
+        </div>
+        <script src="../js/bulma.js"></script>
+</footer>
 
-.chatbot-msg {
-  padding: 5px;
-  margin: 12px;
-  margin-bottom: 3px;
-  margin-top: 3px;
-  width: 75%;
-  background: rgba(255,255,255,0.45);
-  border-radius: 6px;
-}
+<script type="text/javascript">
+    (function () {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#' + burger.dataset.target);
 
-.chatbot-bot-msg {
-  align-self: start;
-}
-
-.chatbot-user-msg {
-  align-self: flex-end;
-}
-
-
-.chatbot-button {
-  display: flex;
-  vertical-align: middle;
-  background: #D4EFDF;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
-  font-size: 19px;
-  /* box-shadow: 0px 0px 2px 4px #51b481; */
-  border-radius: 30px;
-  z-index: 2500;
-}
-
-.chatbot-button:hover {
-  cursor: pointer;
-}
-
-.chatbot-button-text {
-  position: relative;
-  text-align: center;
-  margin: auto auto;
-}
-
-.chatbot-close {
-  margin-right: 10px;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.show {
-  opacity: 1;
-  transform: scale(1);
-  transform-origin: bottom right;
-}
-</style>
-
-
-
-<script>
-  const doChatbotRequest = (msg, consumer, onerror) => {
-  var formData = new FormData();
-  formData.append('msg', msg);
-
-  fetch('https://mancibot.me/api/v1/message', {
-    method: 'POST',
-    body: formData,
-    mode: 'cors'
-  })
-  .then(response => response.json())
-  .then(consumer)
-  .catch(onerror);
-}
-
-const chatbotForm = document.getElementById('chatbot-form');
-
-chatbotForm.addEventListener('submit', (e) => {
-  const cbMsgInput = document.getElementById('chatbot-msg-input');
-  const input = cbMsgInput.value;
-  if (!validateMsgInput(input)) {
-    console.log('bad input')
-    return;
-  }
-  renderUserMsg(input);
-  doChatbotRequest(input, renderChatbotResponse, renderChatbotError);
-  cbMsgInput.value = '';
-})
-
-const renderChatbotError = () => {
-  const errormsg = "Ha ocurrido un error al contactar al servidor. Por favor intentalo más tarde. Gracias.";
-  renderMessage(errormsg, 'chatbot-bot-msg')
-  // const response_container = document.createElement('div');
-  // const response_text = document.createTextNode("Ha ocurrido un error al contactar al servidor. Por favor intentalo más tarde. Gracias.");
-  // response_container.classList.add('chatbot-msg')
-  // response_container.classList.add('chatbot-bot-msg')
-  // response_container.appendChild(response_text);
-
-  // const msgs = document.getElementById('chatbot-messages');
-  // msgs.appendChild(response_container);
-  // msgs.scrollTop = msgs.scrollHeight;
-}
-
-const renderChatbotResponse = (json) => {
-  const response = json.bot_response;
-  renderMessage(response, 'chatbot-bot-msg')
-  // const response_container = document.createElement('div');
-  // const response_text = document.createTextNode(response);
-  // response_container.classList.add('chatbot-msg')
-  // response_container.classList.add('chatbot-bot-msg')
-  // response_container.appendChild(response_text);
-
-  // const msgs = document.getElementById('chatbot-messages');
-  // msgs.appendChild(response_container);
-  // msgs.scrollTop = msgs.scrollHeight;
-}
-
-const renderMessage = (msg, clazz) => {
-  const response_container = document.createElement('div');
-  const response_text = document.createTextNode(msg);
-  response_container.classList.add('chatbot-msg')
-  response_container.classList.add(clazz)
-  response_container.appendChild(response_text);
-
-  const msgs = document.getElementById('chatbot-messages');
-  msgs.appendChild(response_container);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-const renderUserMsg = (msg) => {
-  renderMessage(msg, 'chatbot-user-msg')
-  // const response_container = document.createElement('div');
-  // const response_text = document.createTextNode(msg);
-  // response_container.classList.add('chatbot-msg')
-  // response_container.classList.add('chatbot-user-msg')
-  // response_container.appendChild(response_text);
-
-  // const msgs = document.getElementById('chatbot-messages');
-  // msgs.appendChild(response_container);
-  // msgs.scrollTop = msgs.scrollHeight;
-}
-
-const validateMsgInput = (input) => {
-  if (!input) {
-    return false;
-  }
-  if (input.length === undefined || input.trim().length === 0) {
-    return false;
-  }
-  return true;
-}
-
-
-let isVisible = false;
-
-const showOrHideChat = () => {
-  const chat = document.getElementById('chatbot-container');
-  const button = document.getElementById('chatbot-button');
-  if (isVisible) {
-    // chat.style.display = 'none';
-    chat.classList.remove('show')
-    button.style.display = 'flex';
-  } else {
-    // chat.style.display = 'block';
-    chat.classList.add('show')
-    button.style.display = 'none';
-  }
-  isVisible = !isVisible;
-}
+        burger.addEventListener('click', function () {
+            burger.classList.toggle('is-active');
+            nav.classList.toggle('is-active');
+        });
+    })();
 </script>
-
-
