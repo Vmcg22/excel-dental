@@ -2,41 +2,48 @@
 
 <%= form_tag login_path do |form| %>
 
-    <div class="container">
+        <div class="columns is-centered">
+        <section class="hero is-full">
+        
+        <div class="hero-body has-text-centered">
+            <div class="login">
+                <%= image_tag '/assets/welcome/logo.jpg', size: "150x150" %>
+            <br><br>
+            <form>
+                <div class="field">
+                <div class="control">
+                    <%= text_field_tag :email, nil, placeholder: "Ej. 8671264856", class: 'input is-medium is-rounded' %>
+                </div>
+                </div>
+                <div class="field">
+                <div class="control">
+                    <%= password_field_tag :password , nil , placeholder: "**********" , class: 'input is-medium is-rounded' %>
+                </div>
+                </div>
+                <br />
 
-        <div class="notification is-primary"> 
-            <p class="title is-2"> Iniciar Sesión</p>
+                <%= submit_tag "Iniciar Sesión", class: 'button is-block is-fullwidth is-primary is-medium is-rounded' %>
+            </form>
+            <br>
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                <div>
+                    <a href="#">¿Olvidó su contraseña?</a>
+                </div>
+                </div>
+                <div class="level-item has-text-centered">
+                <div>
+                    <%= link_to('Crear una Cuenta', signup_path, class: '') %>
+                </div>
+                </div>
+            </nav>
+            </div>
         </div>
         
-        <div class="buttons">
-            <div class="buttons">
-                <button class="button is-outlined">
-                    <%= link_to "Salir", :back %>
-                </button> 
-            </div>
+        </section>
         </div>
+    
 
-        <br> <br>
 
-        <div class="field">
-            <label class="label">Número de Teléfono</label>
-            
 
-            <div class="control">
-                <%= text_field_tag :email, nil, placeholder: "Ej. 8671264856", class: 'input' %>
-            </div>
-
-        </div>
-
-        <div class="field">
-            <label class="label">Contraseña</label>
-
-            <div class="control">
-                <%= password_field_tag :password , nil, class: 'input' %>
-            </div>
-        </div>
-
-        <%= submit_tag nil, class: 'button is-primary' %>
-
-    </div>
 <% end %>
